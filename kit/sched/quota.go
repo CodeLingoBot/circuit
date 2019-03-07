@@ -33,7 +33,7 @@ func (q *Quota) Init(m int) *Quota {
 	return q
 }
 
-// Lock blocks until there are fewer than limit unclosed sessions.
+// Begin: Lock blocks until there are fewer than limit unclosed sessions.
 // A session begins when Open returns.
 func (q *Quota) Begin() error {
 	// Take an execution permit

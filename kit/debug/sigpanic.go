@@ -16,7 +16,7 @@ import (
 	"time"
 )
 
-// InstallTimeout panics the current process in ns time
+// InstallTimeoutPanic: panics the current process in ns time
 func InstallTimeoutPanic(ns int64) {
 	go func() {
 		k := int(ns / 1e9)

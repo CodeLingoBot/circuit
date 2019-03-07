@@ -40,7 +40,7 @@ type Item interface{}
 
 type LessFunc func(a, b interface{}) bool
 
-// New() allocates a new tree
+// New: New allocates a new tree
 func New(lessfunc LessFunc) *Tree {
 	t := &Tree{}
 	t.Init(lessfunc)
@@ -407,7 +407,7 @@ func (t *Tree) iterateRangeInclusive(h *Node, c chan<- Item, lower, upper Item) 
 	}
 }
 
-// IterRange() returns a chan that iterates through all elements E in the
+// IterRange returns a chan that iterates through all elements E in the
 // tree with lower <= E < upper in ascending order.
 // TODO: This is a deprecated interface for iteration.
 func (t *Tree) IterRange(lower, upper Item) <-chan Item {

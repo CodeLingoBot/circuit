@@ -44,7 +44,7 @@ func IsTerminal(fd uintptr) bool {
 	return err == 0
 }
 
-// Restore restores the terminal connected to the given file descriptor to a
+// RestoreTerminal: Restore restores the terminal connected to the given file descriptor to a
 // previous state.
 func RestoreTerminal(fd uintptr, state *State) error {
 	_, _, err := syscall.Syscall(syscall.SYS_IOCTL, fd, uintptr(setTermios), uintptr(unsafe.Pointer(&state.termios)))

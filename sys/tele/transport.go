@@ -24,7 +24,7 @@ func init() {
 // System is the high-level type that encloses a monolithic networking functionality
 type System struct{}
 
-// workerID is the ID for this transport endpoint.
+// NewTransport: workerID is the ID for this transport endpoint.
 // addr is the networking address to listen to.
 func (s *System) NewTransport(workerID n.WorkerID, addr net.Addr, key []byte) n.Transport {
 	var u *blend.Transport

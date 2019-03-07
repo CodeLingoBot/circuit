@@ -4,7 +4,7 @@ import (
 	"fmt"
 )
 
-// Retrieve the MX records for miek.nl.
+// ExampleMX retrieves the MX records for miek.nl.
 func ExampleMX() {
 	config, _ := ClientConfigFromFile("/etc/resolv.conf")
 	c := new(Client)
@@ -25,7 +25,7 @@ func ExampleMX() {
 	}
 }
 
-// Retrieve the DNSKEY records of a zone and convert them
+// ExampleDS retrieves the DNSKEY records of a zone and convert them
 // to DS records for SHA1, SHA256 and SHA384.
 func ExampleDS(zone string) {
 	config, _ := ClientConfigFromFile("/etc/resolv.conf")

@@ -1367,7 +1367,7 @@ func reverseInt(m map[int]string) map[string]int {
 	return n
 }
 
-// Convert a MsgHdr to a string, with dig-like headers:
+// String: Convert a MsgHdr to a string, with dig-like headers:
 //
 //;; opcode: QUERY, status: NOERROR, id: 48404
 //
@@ -1575,7 +1575,7 @@ func (dns *Msg) Unpack(msg []byte) (err error) {
 	return nil
 }
 
-// Convert a complete message to a string with dig-like output.
+// String: Convert a complete message to a string with dig-like output.
 func (dns *Msg) String() string {
 	if dns == nil {
 		return "<nil> MsgHdr"

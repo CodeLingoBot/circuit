@@ -182,7 +182,7 @@ func IsFqdn(s string) bool {
 	return s[l-1] == '.'
 }
 
-// Fqdns return the fully qualified domain name from s.
+// Fqdn: Fqdns return the fully qualified domain name from s.
 // If s is already fully qualified, it behaves as the identity function.
 func Fqdn(s string) string {
 	if IsFqdn(s) {

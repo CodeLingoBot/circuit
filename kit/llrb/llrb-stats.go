@@ -11,7 +11,7 @@
 
 package llrb
 
-// GetHeight() returns an item in the tree with key @key, and it's height in the tree
+// GetHeight returns an item in the tree with key @key, and it's height in the tree
 func (t *Tree) GetHeight(key Item) (result Item, depth int) {
 	return t.getHeight(t.root, key)
 }
@@ -31,7 +31,7 @@ func (t *Tree) getHeight(h *Node, item Item) (Item, int) {
 	return h.Item, 0
 }
 
-// HeightStats() returns the average and standard deviation of the height
+// HeightStats returns the average and standard deviation of the height
 // of elements in the tree
 func (t *Tree) HeightStats() (avg, stddev float64) {
 	av := &avgVar{}

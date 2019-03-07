@@ -80,7 +80,7 @@ func DialDiscover(multicast string, authkey []byte) *Client {
 	return c
 }
 
-// Address returns the circuit address of the server that this client is connected to.
+// Addr: Address returns the circuit address of the server that this client is connected to.
 func (c *Client) Addr() string {
 	return c.y.X.Addr().String()
 }
@@ -143,7 +143,7 @@ func (c *Client) MakeDocker(run docker.Run) (docker.Container, error) {
 	return nil, errors.New("cannot create elements outside of servers")
 }
 
-// MakeNameserver…
+// MakeNameserver: MakeNameserver…
 func (c *Client) MakeNameserver(string) (Nameserver, error) {
 	return nil, errors.New("cannot create elements outside of servers")
 }

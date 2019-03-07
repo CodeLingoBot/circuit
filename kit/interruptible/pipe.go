@@ -33,7 +33,7 @@ func Pipe() (Reader, Writer) {
 	return r, w
 }
 
-//  ww<–pipe–>wr <–copy–> rw<–pipe–>rr
+// BufferPipe: ww<–pipe–>wr <–copy–> rw<–pipe–>rr
 func BufferPipe(n int) (Reader, Writer) {
 	x1, x0 := Pipe()
 	x3, x2 := Pipe()

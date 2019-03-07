@@ -17,7 +17,7 @@ func init() {
 	gob.Register(&Error{})
 }
 
-// NewError creates a simple text-based error that is registered with package
+// NewErrorCaller: creates a simple text-based error that is registered with package
 // encoding/gob and therefore can be used in places of error interfaces during
 // cross-calls. In contrast, note that due to the rules of gob encoding error objects
 // that are not explicitly registered with gob cannot be assigned to error interfaces

@@ -28,7 +28,7 @@ func (x XTube) Avatar() tissue.FolkAvatar {
 	return x.t.av
 }
 
-// Write…
+// Write: Write…
 func (x XTube) Write(key string, rev Rev, value interface{}) bool {
 	// log.Printf("xtube writing (%s,%d,%v)", key, rev, value)
 	// defer func() {

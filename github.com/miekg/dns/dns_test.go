@@ -205,7 +205,7 @@ func TestCompressLength(t *testing.T) {
 	}
 }
 
-// Does the predicted length match final packed length?
+// TestMsgCompressLength Does the predicted length match final packed length?
 func TestMsgCompressLength(t *testing.T) {
 	makeMsg := func(question string, ans, ns, e []RR) *Msg {
 		msg := new(Msg)
@@ -451,7 +451,7 @@ func TestNoRdataPack(t *testing.T) {
 	}
 }
 
-// TODO(miek): fix dns buffer too small errors this throws
+// TestNoRdataUnpack: TODO(miek): fix dns buffer too small errors this throws
 func TestNoRdataUnpack(t *testing.T) {
 	data := make([]byte, 1024)
 	for typ, fn := range rr_mk {

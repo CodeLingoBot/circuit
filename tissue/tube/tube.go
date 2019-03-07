@@ -31,7 +31,7 @@ func init() {
 	circuit.RegisterValue(&Tube{}) // In order to be able to compute receiver ID
 }
 
-// NewTube…
+// NewTube: NewTube…
 func NewTube(kin *tissue.Kin, topic string) *Tube {
 	t := &Tube{view: NewView()}
 	t.av = tissue.FolkAvatar{
@@ -153,7 +153,7 @@ func (t *Tube) bulkWriteSync(changed []*Record) {
 	wg.Wait()
 }
 
-// Forget…
+// Forget: Forget…
 func (t *Tube) Forget(key string, notAfterRev Rev, notAfterUpdated time.Time) bool {
 	// log.Printf("tube forgetting %s not after rev %v and not after updated %v", key, notAfterRev, notAfterUpdated)
 	// defer func() {
@@ -164,7 +164,7 @@ func (t *Tube) Forget(key string, notAfterRev Rev, notAfterUpdated time.Time) bo
 	return t.view.Forget(key, notAfterRev, notAfterUpdated)
 }
 
-// Scrub…
+// Scrub: Scrub…
 func (t *Tube) Scrub(key string, notAfterRev Rev, notAfterUpdated time.Time) {
 	t.Lock()
 	defer t.Unlock()
@@ -189,7 +189,7 @@ func (t *Tube) scrubSync(key string, notAfterRev Rev, notAfterUpdated time.Time)
 	wg.Wait()
 }
 
-// Lookup…
+// Lookup: Lookup…
 func (t *Tube) Lookup(key string) *Record {
 	t.Lock()
 	defer t.Unlock()

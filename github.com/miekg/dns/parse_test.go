@@ -718,7 +718,7 @@ func TestLineNumberError(t *testing.T) {
 	}
 }
 
-// Test with no known RR on the line
+// TestLineNumberError2 tests with no known RR on the line
 func TestLineNumberError2(t *testing.T) {
 	tests := map[string]string{
 		"example.com. 1000 SO master.example.com. admin.example.com. 1 4294967294 4294967293 4294967295 100": "dns: expecting RR type or class, not this...: \"SO\" at line: 1:21",
@@ -744,7 +744,7 @@ func TestLineNumberError2(t *testing.T) {
 	}
 }
 
-// Test if the calculations are correct
+// TestRfc1982 tests if the calculations are correct
 func TestRfc1982(t *testing.T) {
 	// If the current time and the timestamp are more than 68 years apart
 	// it means the date has wrapped. 0 is 1970
@@ -1204,7 +1204,7 @@ func TestTxtLong(t *testing.T) {
 	}
 }
 
-// Basically, don't crash.
+// TestMalformedPackets: Basically, don't crash.
 func TestMalformedPackets(t *testing.T) {
 	var packets = []string{
 		"0021641c0000000100000000000078787878787878787878787303636f6d0000100001",

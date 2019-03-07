@@ -33,7 +33,7 @@ type sketch struct {
 	AbortDur stat.Moment
 }
 
-// NewProfile creates a new Profile instance
+// New: New creates a new Profile instance
 func New() *Profile {
 	return &Profile{
 		replyProc: make(map[string]*sketch),

@@ -42,7 +42,7 @@ func (x *SlidingMoment) TimeSpan() time.Duration {
 	return time.Duration(x.slotdur * int64(len(x.slots)))
 }
 
-// Moment returns a pointer to the current moment structure corresponding to time t.
+// Slot: Moment returns a pointer to the current moment structure corresponding to time t.
 func (x *SlidingMoment) Slot(t time.Time) *Moment {
 	slot := t.UnixNano() / x.slotdur
 	if !x.spin(slot) {

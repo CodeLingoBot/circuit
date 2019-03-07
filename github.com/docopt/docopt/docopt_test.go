@@ -1404,7 +1404,7 @@ func TestIssue126DefaultsNotParsedCorrectlyWhenTabs(t *testing.T) {
 	}
 }
 
-// conf file based test cases
+// TestFileTestcases: conf file based test cases
 func TestFileTestcases(t *testing.T) {
 	filenames := []string{"testcases.docopt", "test_golang.docopt"}
 	for _, filename := range filenames {

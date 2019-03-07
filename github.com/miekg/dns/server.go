@@ -72,12 +72,12 @@ var DefaultServeMux = NewServeMux()
 // Handler object that calls f.
 type HandlerFunc func(ResponseWriter, *Msg)
 
-// ServerDNS calls f(w, r)
+// ServeDNS: ServerDNS calls f(w, r)
 func (f HandlerFunc) ServeDNS(w ResponseWriter, r *Msg) {
 	f(w, r)
 }
 
-// FailedHandler returns a HandlerFunc
+// HandleFailed returns a HandlerFunc
 // returns SERVFAIL for every request it gets.
 func HandleFailed(w ResponseWriter, r *Msg) {
 	m := new(Msg)
@@ -149,7 +149,7 @@ func (mux *ServeMux) Handle(pattern string, handler Handler) {
 	mux.m.Unlock()
 }
 
-// Handle adds a handler to the ServeMux for pattern.
+// HandleFunc handles adds a handler to the ServeMux for pattern.
 func (mux *ServeMux) HandleFunc(pattern string, handler func(ResponseWriter, *Msg)) {
 	mux.Handle(pattern, HandlerFunc(handler))
 }

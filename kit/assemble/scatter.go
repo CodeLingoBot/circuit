@@ -27,7 +27,7 @@ type Msg struct {
 	Payload []byte
 }
 
-// addr is a udp multicast address.
+// NewScatter: addr is a udp multicast address.
 func NewScatter(addr *net.UDPAddr, key xor.Key, payload []byte) *Scatter {
 	return &Scatter{
 		addr: addr,

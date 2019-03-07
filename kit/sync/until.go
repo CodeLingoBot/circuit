@@ -100,7 +100,7 @@ type Subscriber struct {
 	ch chan interface{}
 }
 
-// Scrub and Wait must be not be called concurrently.
+// Wait: Scrub and Wait must be not be called concurrently.
 func (s *Subscriber) Wait() interface{} {
 	return <-s.ch
 }

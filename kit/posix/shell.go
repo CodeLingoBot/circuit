@@ -84,7 +84,7 @@ func PrintScript(dir string, env Env, s string) {
 // Env holds environment variables
 type Env map[string]string
 
-// Rename to GetEnv
+// OSEnv: Rename to GetEnv
 func OSEnv() Env {
 	environ := os.Environ()
 	r := make(Env)

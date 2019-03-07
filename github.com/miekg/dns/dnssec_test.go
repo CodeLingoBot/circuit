@@ -495,7 +495,7 @@ func TestSignVerifyECDSA2(t *testing.T) {
 	}
 }
 
-// Here the test vectors from the relevant RFCs are checked.
+// TestRFC6605P256: Here the test vectors from the relevant RFCs are checked.
 // rfc6605 6.1
 func TestRFC6605P256(t *testing.T) {
 	exDNSKEY := `example.net. 3600 IN DNSKEY 257 3 13 (
@@ -569,7 +569,7 @@ PrivateKey: GU6SnQ/Ou+xC5RumuIUIuJZteXT2z0O/ok1s38Et6mQ=`
 	}
 }
 
-// rfc6605 6.2
+// TestRFC6605P384: rfc6605 6.2
 func TestRFC6605P384(t *testing.T) {
 	exDNSKEY := `example.net. 3600 IN DNSKEY 257 3 14 (
                  xKYaNhWdGOfJ+nPrL8/arkwf2EY3MDJ+SErKivBVSum1

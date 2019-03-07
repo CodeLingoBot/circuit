@@ -90,7 +90,7 @@ func (x *Moment) Min() float64 {
 	return x.min
 }
 
-// Ma returns the largest sample added to this sketch.
+// Max: Ma returns the largest sample added to this sketch.
 func (x *Moment) Max() float64 {
 	return x.max
 }
